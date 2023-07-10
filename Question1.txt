@@ -1,0 +1,47 @@
+Q.1 Create a superclass called Animal with a method makeSound() that prints the sound made by the animal. Implement subclasses Dog, Cat, and Cow that inherit from the Animal class. Implement the makeSound() method in each subclass to print the sound made by a dog, cat, and cow, respectively.
+Ans.
+package MockTest;
+
+//Super class
+class Animal{
+    void makeSound(){
+        System.out.println("Sound made by Animal.");
+    }
+}
+
+//sub-class
+class Dog extends Animal{
+    @Override
+    void makeSound(){
+        System.out.println("Sound made by Dog");
+    }
+}
+
+// sub-class
+class Cat extends Animal{
+     @Override
+    void makeSound(){
+        System.out.println("Sound made by Cat");
+    }
+}
+
+// sub-class
+class Cow extends Animal{
+    @Override
+    void makeSound(){
+        System.out.println("Sound made by Cow");
+    }
+}
+
+public class Question1 {
+    public static void main(String[] args) {
+        Animal objDog=new Dog();
+        Animal objCat=new Cat();
+        Animal objCow=new Cow();
+        
+        objDog.makeSound();
+        objCat.makeSound();
+        objCow.makeSound();
+
+    }
+}
